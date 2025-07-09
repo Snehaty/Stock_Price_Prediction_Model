@@ -1,108 +1,82 @@
-# 📈 LSTM Stock Price Prediction & Forecasting Dashboard
+# 📈 Stock Price Predictor & Investment Simulator
 
-This project leverages deep learning (LSTM networks) to forecast stock prices, featuring an interactive dashboard for effective visualization and analysis. It demonstrates the application of machine learning in financial time series forecasting and showcases end-to-end engineering, from data preprocessing to deployment.
+An interactive Streamlit web app that predicts next-day stock prices using a deep learning model and simulates investment outcomes. Built with a Bidirectional LSTM trained on technical indicators and historical price data.
+
+![image](https://github.com/user-attachments/assets/c9f79b7e-3687-4ce6-a5d9-0119cea27007)
+![image](https://github.com/user-attachments/assets/46e97997-07b7-43dd-ac0a-c08a792f1875)
+
 
 ---
 
-## 🚀 Overview
+## 🚀 Key Features
 
-- **Objective:** Predict future stock prices using historical data with an LSTM neural network.
-- **Features:**
-  - Feature engineering (SMA, EMA, momentum, etc.)
-  - LSTM model training and evaluation
-  - Interactive Streamlit dashboard for real-time prediction and visualization
-  - Clear comparison of actual vs. predicted prices, rolling forecasts, and residual analysis
-
----
-
-
-
-## 🛠️ Tech Stack
-
-- **Programming:** Python 3.x
-- **Libraries:** Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, TensorFlow/Keras, Streamlit
-- **Tools:** Git, GitHub, Jupyter Notebook, ngrok (for deployment)
+- **Real-time Data** - Fetches live market data from Yahoo Finance (`yfinance`)
+- **Technical Analysis** - Calculates 13+ indicators including:
+  - Moving Averages (SMA, EMA)
+  - Momentum Indicators (RSI, MACD)
+  - Volatility Measures (Bollinger Bands)
+- **AI Prediction** - Bidirectional LSTM model trained on 60-day windows
+- **Investment Simulator** - Calculates potential profit/loss scenarios
+- **Trading Strategy** - Provides Buy/Hold/Sell recommendations
+- **Interactive Charts** - Visualizes historical prices and predictions
 
 ---
 
-## 📊 Key Features
+## 🧠 Model Architecture
 
-- **End-to-End Pipeline:**  
-  Data loading → Cleaning → Feature engineering → Train/test split → Model training → Evaluation → Deployment.
-- **Deep Learning Model:**  
-  LSTM layers capture temporal dependencies in financial data for robust predictions.
-- **Dashboard:**  
-  Built with Streamlit for user-friendly interaction. Plots actual vs. predicted prices, forecasts, and error metrics.
-- **Customizable:**  
-  Users can select the stock, adjust look-back windows, and tweak forecast parameters.
+- **Model Type**: 2-layer Bidirectional LSTM
+- **Input**: 60 days × 13 technical features
+- **Output**: Next day's predicted price
+- **Training**:
+  ```python
+  model.fit(X_train, y_train, epochs=20, batch_size=32)
+  stock-lstm-app/
+  
+# 📦 Project Structure
 
----
+```
+stock-lstm-app/
+├── app.py
+├── requirements.txt
+└── model/
+    ├── model.h5
+    ├── feature_scaler.save
+    └── target_scaler.save
+```
 
 
+## 🔧 Installation & Usage
 
-- **Performance Metrics:**  
-  - RMSE, MAE, and R² displayed on dashboard
-  - Visual inspection of forecast accuracy via plots
+```
+# Clone repository
+git clone https://github.com/yourusername/stock-lstm-app.git
+cd stock-lstm-app
 
----
+# Install dependencies
+pip install -r requirements.txt
 
-## 📂 How to Run
+# Launch application
+streamlit run app.py
+```
+## ✨ Credits
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Snehaty/lstm-stock-dashboard.git
-   cd lstm-stock-dashboard
-   ```
-
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Run the Streamlit dashboard**
-   ```bash
-   streamlit run app.py
-   ```
-
-4. **(Optional) Expose the dashboard online**
-   ```bash
-   ngrok http 8501
-   ```
-   Use the provided ngrok URL to access remotely.
-
----
-
-## 🧠 What You'll Learn
-
-- How to preprocess time series financial data for ML
-- Building and tuning LSTM models for sequence prediction
-- Deploying ML models as web apps with Streamlit
-- Visualizing forecasts and understanding limitations of time series prediction
+**Developer**: Sneha Tyagi  
+**Built with**:
+- TensorFlow
+- Streamlit
+- yfinance  
+**Visualization**: Plotly
 
 ---
 
-## 🏆 Why This Project?
+## 📜 License 
 
-Financial forecasting is a cornerstone of data-driven engineering in industry. This project demonstrates:
-- **Technical depth:** Advanced ML and deep learning for real-world data
-- **Software engineering:** Modular, reproducible code, version control, and deployment
-- **Communication:** Clear results, visualizations, and documentation
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.  
+Permissions include:
+- ✅ Free use
+- ✅ Modification
+- ✅ Distribution
+- ✅ Private use
 
----
 
-## 🤝 Contributions
 
-Contributions, issues, and feature requests are welcome!  
-If you use this project, please ⭐️ the repo and share your feedback.
-
----
-
-## 📬 Contact
-
-- [GitHub](https://github.com/Snehaty)
-- [LinkedIn](https://linkedin.com/in/sneha-tyagi-482692289)
-- [Email](mailto:snehatyagi4002@gmail.com)
-
----
-
-> _“Turning data into action: forecasting tomorrow’s markets, today.”_
