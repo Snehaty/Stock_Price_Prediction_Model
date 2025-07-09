@@ -1,6 +1,7 @@
 streamlit
-pandas
-numpy
-matplotlib
+tensorflow
+yfinance
+joblib
 scikit-learn
-pyngrok
+pandas
+matplotlib
