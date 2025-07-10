@@ -1,8 +1,8 @@
 streamlit
-tensorflow-cpu==2.11.0
 yfinance
+pandas
+numpy
+tensorflow==2.13.0
 joblib
 scikit-learn
-pandas
 matplotlib
-numpy
