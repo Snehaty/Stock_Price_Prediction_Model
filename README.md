@@ -59,7 +59,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-🌍 Deployment
+🌐 Deployment
 You can deploy the app online using the methods below:
 
 🚀 Streamlit Community Cloud
@@ -74,7 +74,16 @@ Select app.py as the entry point.
 Your app will be live at:
 https://<your-username>-<repo-name>.streamlit.app/
 
-https://stockpricepredictionmodel-lappppzpatwn9xxpphy8tkac.streamlit.app/
+
+
+
+🚀 Live Demo
+
+👉 https://stockpricepredictionmodel-lappppzpatwn9xxpphy8tkac.streamlit.app/
+
+
+
+
 
 
 
