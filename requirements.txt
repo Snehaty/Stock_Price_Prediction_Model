@@ -2,7 +2,8 @@ streamlit
 yfinance
 pandas
 numpy
-tensorflow==2.13.0
+tensorflow==2.18.0
 joblib
 scikit-learn
 matplotlib
+keras==3.10.0
