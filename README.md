@@ -58,6 +58,38 @@ pip install -r requirements.txt
 # Launch application
 streamlit run app.py
 ```
+
+🌍 Deployment
+You can deploy the app online using the methods below:
+
+🚀 Streamlit Community Cloud
+Push your project to a public GitHub repository.
+
+Visit https://streamlit.io/cloud.
+
+Click “New App” and connect your repo.
+
+Select app.py as the entry point.
+
+Your app will be live at:
+https://<your-username>-<repo-name>.streamlit.app/
+
+https://stockpricepredictionmodel-lappppzpatwn9xxpphy8tkac.streamlit.app/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## ✨ Credits
 
 **Developer**: Sneha Tyagi  
